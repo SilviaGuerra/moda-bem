@@ -1,0 +1,115 @@
+@import 'variables';
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #d83567;
+}
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  clear: both;
+}
+
+.row:before, .row:after{
+  content: " ";
+  display: table;
+}
+
+.row:after{
+  clear: both;
+}
+
+[class*="col-"]{
+  min-height: 7px;
+  padding: 12px;
+  float: left;
+}
+
+.templateRow{
+  content: " ";
+  display: table;
+}
+
+.row{
+  &:before{
+    @extend .templateRow;
+  }
+  &:after{
+    @extend .templateRow;
+    clear: both;
+  }
+}
+
+@function anchoDeColumnas($i){
+  @return percentage(($i/12));
+}
+
+@for $i from 1 through 12{
+  .col-#{$i}{
+    width: anchoDeColumnas($i);
+    background: transparent;
+  }
+}
+
+@for $i from 1 through 12{
+  .col-#{$i}-offset{
+    margin-left: anchoDeColumnas($i);
+    background: transparent;
+  }
+}
+
+@mixin list-nav{
+  font-size: 16px;
+  font-family: 'Dosis', sans-serif;
+  background: $morado;
+  padding-top: 15px;
+}
+
+.menu{
+  @include list-nav;
+  height: 70px;
+}
+
+.titulo{
+  background: transparent;
+  font-size: 35px;
+  font-family: $fuente;
+  margin-left: 12px;
+  margin-top: -14px;
+}
+
+.menu_item{
+  @include list-nav;
+  list-style: $ninguno;
+  display: inline;
+  margin: 45px;
+}
+
+a{
+  @include list-nav;
+  text-decoration: $ninguno;
+  color: black;
+}
+
+a:hover{
+  color: $rosa;
+}
+
+.fotos{
+  margin: 20px 10px;
+}
+
+.fotos_item{
+  height: 200px;
+  margin-left: 10px;
+}
+
+.fotos_cerrar{
+  position: absolute;
+  margin: 6px -25px;
+  color: #EE0006;
+}
