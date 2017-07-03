@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #d83567;
 }
 
 .container{
@@ -65,7 +64,7 @@
 @mixin list-nav{
   font-size: 16px;
   font-family: 'Dosis', sans-serif;
-  background: $morado;
+  background: $rosa;
   padding-top: 15px;
 }
 
@@ -100,7 +99,8 @@ a:hover{
 }
 
 .fotos{
-  margin: 20px 10px;
+  margin: 20px 40px;
+  display: flex-inline;
 }
 
 .fotos_item{
@@ -112,4 +112,12 @@ a:hover{
   position: absolute;
   margin: 6px -25px;
   color: #EE0006;
+}
+
+.boton-info{
+  @include list-nav;
+  margin-left: 40px;
+  border: $ninguno;
+  width: 200px;
+  height: 70px;
 }

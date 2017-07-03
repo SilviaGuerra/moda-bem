@@ -1,8 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  background: #d83567; }
+  padding: 0; }
 
 .container {
   width: 100%;
@@ -128,7 +127,7 @@
 .menu {
   font-size: 16px;
   font-family: 'Dosis', sans-serif;
-  background: #88259a;
+  background: #d83598;
   padding-top: 15px;
   height: 70px; }
 
@@ -142,7 +141,7 @@
 .menu_item {
   font-size: 16px;
   font-family: 'Dosis', sans-serif;
-  background: #88259a;
+  background: #d83598;
   padding-top: 15px;
   list-style: none;
   display: inline;
@@ -151,7 +150,7 @@
 a {
   font-size: 16px;
   font-family: 'Dosis', sans-serif;
-  background: #88259a;
+  background: #d83598;
   padding-top: 15px;
   text-decoration: none;
   color: black; }
@@ -160,7 +159,8 @@ a:hover {
   color: #d83598; }
 
 .fotos {
-  margin: 20px 10px; }
+  margin: 20px 40px;
+  display: flex-inline; }
 
 .fotos_item {
   height: 200px;
@@ -170,5 +170,15 @@ a:hover {
   position: absolute;
   margin: 6px -25px;
   color: #EE0006; }
+
+.boton-info {
+  font-size: 16px;
+  font-family: 'Dosis', sans-serif;
+  background: #d83598;
+  padding-top: 15px;
+  margin-left: 40px;
+  border: none;
+  width: 200px;
+  height: 70px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
-var foto = document.getElementsByClassName("panda");
-var cerrar = document.getElementsByClassName("cerrar");
+var foto = document.getElementsByClassName("fotos_item");
+var cerrar = document.getElementsByClassName("fotos_cerrar");
 
 for(i= 0; i < foto.length; i++){
   foto[i].addEventListener("click", borrar);
